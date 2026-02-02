@@ -61,11 +61,12 @@ const Create = () => {
                         label = {"League"}
                         options = {league}
                     />
-
-                    <SelectForm
-                        label = {"Country"}
-                        options = {country}
-                    />
+                    <Box sx={{marginTop: '30px'}}>
+                        <SelectForm
+                            label = {"Country"}
+                            options = {country}
+                        />
+                    </Box>
                     <Box sx={{marginTop: '30px'}}>
                         <TextForm
                             label={"Attendance"}
