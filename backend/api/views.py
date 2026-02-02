@@ -4,7 +4,7 @@ from .serializers import *
 from .models import *
 from rest_framework.response import Response
 
-class CountryViewSet(viewsets.ViewSet):
+class CountryViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = Country.objects.all()
     serializer_class = CountrySerializer
@@ -14,7 +14,8 @@ class CountryViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
 
-class LeagueViewSet(viewsets.ViewSet):
+
+class LeagueViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = League.objects.all()
     serializer_class = LeagueSerializer
@@ -24,8 +25,7 @@ class LeagueViewSet(viewsets.ViewSet):
         serializer = self.serializer_class(queryset, many=True)
         return Response(serializer.data)
 
-
-class CharacteristicViewSet(viewsets.ViewSet):
+class CharacteristicViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = Characteristic.objects.all()
     serializer_class = CharacteristicSerializer
@@ -36,12 +36,12 @@ class CharacteristicViewSet(viewsets.ViewSet):
         return Response(serializer.data)
 
 
-class FootballClubViewSet(viewsets.ViewSet):
+class FootballClubViewset(viewsets.ViewSet):
     permission_classes = [permissions.AllowAny]
     queryset = FootballClub.objects.all()
     serializer_class = FootballClubSerializer
 
-    def create(self, request):
+    def create(self,request):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             serializer.save()

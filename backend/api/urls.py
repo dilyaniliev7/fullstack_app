@@ -3,10 +3,10 @@ from django.urls import path
 from .views import *
 from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register('country', CountryViewSet, basename='country')
-router.register('league', LeagueViewSet, basename='league')
-router.register('characteristic', CharacteristicViewSet, basename='characteristic')
-router.register('footballclub', FootballClubViewSet, basename='footballclub')
 
+router = DefaultRouter()
+router.register('country',CountryViewset, basename='country')
+router.register('league',LeagueViewset, basename='league')
+router.register('characteristic',CharacteristicViewset, basename='characteristic')
+router.register('footballclub',FootballClubViewset, basename='footballclub')
 urlpatterns = router.urls

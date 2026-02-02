@@ -20,13 +20,12 @@ const MenuProps = {
 };
 
 
-export default function MultiSelectForm({label, options,value,name,onChange,onBlur}) {
+export default function MultiSelectForm({label,options,value,name,onChange,onBlur}) {
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
 
   return (
     <div>
-      <FormControl sx={{ width: '100%' }}>
+      <FormControl sx={{width:'100%' }}>
         <InputLabel id="demo-multiple-chip-label">{label}</InputLabel>
         <Select
           labelId="demo-multiple-chip-label"
@@ -42,7 +41,7 @@ export default function MultiSelectForm({label, options,value,name,onChange,onBl
               {selected.map((value) => (
                 <Chip
                 key={value}
-                label={options.find(option => option.id === value)?.name} />
+                label={options.find(option => option.id===value)?.name} />
               ))}
             </Box>
           )}
@@ -52,7 +51,6 @@ export default function MultiSelectForm({label, options,value,name,onChange,onBl
             <MenuItem
               key={option.id}
               value={option.id}
-
             >
               {option.name}
             </MenuItem>
