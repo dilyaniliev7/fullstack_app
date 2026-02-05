@@ -1,6 +1,6 @@
-import {React, useState, useEffect} from 'react'
-import AxiosInstance from './Axios'
-import {Box, Typography} from '@mui/material'
+import {React, useState, useEffect} from 'react';
+import AxiosInstance from './Axios';
+import {Box, Typography} from '@mui/material';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import TextForm from './forms/TextForm';
 import SelectForm from './forms/SelectForm';
