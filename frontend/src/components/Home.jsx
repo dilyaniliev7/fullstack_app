@@ -2,6 +2,7 @@ import {React, useEffect, useMemo,useState} from 'react'
 import {Box, Chip, IconButton, Typography} from '@mui/material'
 import { Link } from 'react-router';
 import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 import CalendarViewMonthIcon from '@mui/icons-material/CalendarViewMonth';
 import {MaterialReactTable} from 'material-react-table';
 import AxiosInstance from './Axios';
@@ -77,6 +78,10 @@ const Home = () =>{
                     <Box sx={{display:'flex', flexWrap:'nowrap', gap:'8px'}}>
                         <IconButton color="primary" component={Link} to={`edit/${row.original.id}`}>
                             <EditIcon/>
+                        </IconButton>
+
+                        <IconButton color="error" component={Link} to={`delete/${row.original.id}`}>
+                            <DeleteIcon/>
                         </IconButton>
                     </Box>
                     )

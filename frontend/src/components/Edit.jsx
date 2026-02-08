@@ -87,7 +87,7 @@ const Edit = () =>{
             .then(()=>{
                 setMessage(
                     <MyMessage
-                        messageText = {"You succesfully updated data in the database!"}
+                        messageText = {"You successfully updated data in the database!"}
                         messagecolor = {"green"}
                     />
                 )
